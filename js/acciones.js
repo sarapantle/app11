@@ -1,7 +1,7 @@
 //JavaScript Document
 
-$(document).ready(function (e){
-document.addEventListener ("deviceready",onDeviceReady,false);
+$(document).ready(function(e) {
+document.addEventListener("deviceready", onDeviceReady, false);
 
 });
 
@@ -15,10 +15,10 @@ $('#posicion').on('click',function(){
 function getPosition(){
 	var options={
 		enableHighAccuracy :true,
-		maximumAge:3600000
+		maximumAge: 3600000
 	}
 	
-	var watchID=navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+	var watchID=navigator.geolocation.getCurrentPosition(onSuccess, onError,options);
 	function onSuccess(position){
 		
 		alert('Latitude:'   +position.coords.latitude    +'\n'+
@@ -26,6 +26,6 @@ function getPosition(){
 	);
 	
 	function onError(error){
-		alert('code:'  +error.code  +'\n' + 'message:' +error.message +'\n');
+		alert('code:'  +error.code  +'\n'+'message:' +error.message + '\n');
 	}
 }
